@@ -1,0 +1,27 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "Todolist.html",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "Todolist.css",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "Todolist.js",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "Images/*",
+        "use": "@vercel/static"
+      }
+    ],
+    "routes": [
+      { "src": "/Todolist.css", "dest": "/Todolist.css" },
+      { "src": "/Todolist.js", "dest": "/Todolist.js" },
+      { "src": "/Images/(.*)", "dest": "/Images/$1" },
+      { "src": "/(.*)", "dest": "/Todolist.html" }
+    ]
+  }
